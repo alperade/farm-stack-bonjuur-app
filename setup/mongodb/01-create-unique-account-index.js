@@ -1,5 +1,5 @@
 conn = Mongo();
-db = conn.getDB("fomore-db");
+db = conn.getDB("bonjuur-db");
 
 db.accounts.insertOne({
   _id: ObjectId("633184f42ec069ab607b0b5b"),

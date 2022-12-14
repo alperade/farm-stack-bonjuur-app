@@ -5,7 +5,7 @@ from typing import Optional
 
 
 class SessionQueries(Queries):
-    DB_NAME = "fomore-db"
+    DB_NAME = "bonjuur-db"
     COLLECTION = "sessions"
 
     def get(self, jti: str):

@@ -1,12 +1,12 @@
 volumes:
-  fomore-mongo-data:
+  bonjuur-mongo-data:
     external: true
 services:
   mongo:
     image: mongo:6
     volumes:
       - ./setup/mongodb:/docker-entrypoint-initdb.d
-      - fomore-mongo-data:/data/db
+      - bonjuur-mongo-data:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
@@ -26,15 +26,15 @@ services:
 
   fastapi:
     build:
-      context: ./fomore_api
+      context: ./bonjuur-api
       dockerfile: ./Dockerfile.dev
     ports:
       - 8000:8000
     volumes:
-      - ./fomore_api:/app
+      - ./bonjuur-api:/app
     environment:
-      MONGO_URL: ${MONGO_URL}
-      DATABASE_NAME: fomore-db
+      MONGO_URL: mongodb://admin:admin@mongo
+      DATABASE_NAME: bonjuur-db
       SIGNING_KEY: ${SIGNING_KEY}
       YELP_API_KEY: ${YELP_API_KEY}
       WAIT_HOSTS: mongo:27017
