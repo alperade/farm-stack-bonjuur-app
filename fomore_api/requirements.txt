@@ -1,0 +1,10 @@
+fastapi[all]==0.81.0
+uvicorn[standard]==0.17.6
+pytest
+pymongo[srv]==4.1.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.5
+websockets
+jwtdown-fastapi==0.3.0
+requests==2.28.1

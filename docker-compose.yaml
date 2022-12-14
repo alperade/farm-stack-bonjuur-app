@@ -1,0 +1,57 @@
+volumes:
+  fomore-mongo-data:
+    external: true
+services:
+  mongo:
+    image: mongo:6
+    volumes:
+      - ./setup/mongodb:/docker-entrypoint-initdb.d
+      - fomore-mongo-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+  mongo-express:
+    build:
+      context: setup/mongo-express
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: admin
+      WAIT_HOSTS: mongo:27017
+      WAIT_BEFORE: 5
+      WAIT_TIMEOUT: 60
+
+  fastapi:
+    build:
+      context: ./fomore_api
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - 8000:8000
+    volumes:
+      - ./fomore_api:/app
+    environment:
+      MONGO_URL: ${MONGO_URL}
+      DATABASE_NAME: fomore-db
+      SIGNING_KEY: ${SIGNING_KEY}
+      YELP_API_KEY: ${YELP_API_KEY}
+      WAIT_HOSTS: mongo:27017
+      WAIT_BEFORE: 5
+      WAIT_TIMEOUT: 60
+  ghi:
+    image: node:lts-bullseye
+    command: bash -c "npm install && npm start"
+    working_dir: /app
+    volumes:
+      - ./ghi:/app
+    ports:
+      - "3000:3000"
+    environment:
+      HOST_OS: ${OS}
+      NODE_ENV: development
+      HOST: "0.0.0.0"
+      PUBLIC_URL: http://localhost:3000
+      REACT_APP_FOMORE_API_HOST: http://localhost:8000
+      REACT_APP_WS_HOST: ws://localhost:8000

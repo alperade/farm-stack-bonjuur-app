@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* footer {
+  background-color: #348888;
+  height: 10vh;
+} */
+
+.section-border {
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(250, 250, 250);
+}
+
+.item-border {
+  padding: 5px;
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  object-fit: cover;
+  height: 130px;
+}
+
+.bg-color {
+  background-color: #348888;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+.nav-logo {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.nav-color {
+  background-color: #22babb;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nav-text {
+  color: white;
+}
+
+.add-btn {
+  border-radius: 5px;
+  background-color: #fa7f08;
+  margin-left: 5px;
+  border-style: none;
+  color: white;
+  text-align: center;
+  transition-duration: 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #f24405;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-margin {
+  margin-top: 10px;
+}
+
+.padding {
+  padding: 5px;
+  text-align: center;
+}
+
+.add-link {
+  text-align: right;
+  color: #f24405;
+  font-style: italic;
+}
+
+.welcome-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  color: #9ef8ee;
+}
+
+.welcome-subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-top: auto;
+  margin-bottom: 2vh;
+}
+
+.welcome-body {
+  text-align: center;
+  margin-right: 200px;
+  margin-left: 200px;
+  color: white;
+  margin-bottom: 4vh;
+}
+
+.btn-outline-success {
+  color: #f24405 !important;
+  border-color: #f24405 !important;
+}
+
+.link-green {
+  color: #22babb;
+  text-decoration: none;
+}
+
+.link-green:hover {
+  color: #348888;
+}
+
+.link-delete {
+  color: #f24405;
+}
+
+.card-body {
+  margin: 0px;
+}
