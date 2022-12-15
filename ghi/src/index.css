@@ -43,7 +43,8 @@ code {
 }
 
 .bg-color {
-  background-color: #f0f0f0;
+  /* background-color: #fbfafc; */
+  background-image: linear-gradient(#f6edf1, #ffffff);
   min-height: 100vh;
   max-height: 100%;
 }

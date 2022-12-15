@@ -59,7 +59,7 @@ function Nav() {
 
   return (
     <>
-      <nav className="navbar" style={{backgroundColor: '#b3b3ff'}}>
+      <nav className="navbar" style={{backgroundImage: "linear-gradient(90deg, #e4c9d6, #ddd7ed)" }}>
         <div className="container-fluid" style={{marginLeft: '10rem'}}>
             <a className="navbar-brand" href="/">
               <img src={logo} alt="Bonjuur" style={{width: "10vw", display:"block", width:"50%", height:"auto"}} />

@@ -3,6 +3,7 @@ import ItineraryList from "./Features/Itineraries/Itinerary";
 import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
 import MemberForm from "./MemberForm";
+import PickMembership from "./PickMembership";
 
 
 function Main() {
@@ -16,7 +17,7 @@ function Main() {
         </Col>
         <Col sm={5}>
           <div className="section-border">
-            kolon 2
+            <PickMembership/>
           </div>
         </Col>
       </Row>
