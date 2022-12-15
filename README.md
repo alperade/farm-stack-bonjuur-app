@@ -20,3 +20,6 @@ RESTful web application for scheduling cleaning appointments.
 - time_slot (morning afternoon evening)
 - is_active
 - cleaner
+
+
+## To-do

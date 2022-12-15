@@ -4,6 +4,8 @@ const initialState = {
   membership: "",
   bedrooms: 0,
   bathrooms: 0,
+  humans: 0,
+  pets: 0,
   email: "",
   phone: "",
   address: "",

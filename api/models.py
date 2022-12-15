@@ -44,6 +44,8 @@ class MemberIn(BaseModel):
     membership: str
     bedrooms: int
     bathrooms: int
+    humans: int
+    pets: int
     email: str
     phone: str
     address: str

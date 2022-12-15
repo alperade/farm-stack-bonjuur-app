@@ -1,14 +1,18 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { updateMember } from "./app/memberSlice";
 
 
 export function PickMembership() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
 
   function handleInput(e) {
     const action = updateMember({ membership: e.target.value});
     dispatch(action);
+    navigate('/step2')
   }
 
   return (

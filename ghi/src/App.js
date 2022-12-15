@@ -8,6 +8,9 @@ import Events from "./Features/Events/ListEvents_playaround";
 import ItineraryDetail from "./Features/Itineraries/ItineraryDetail";
 import UpdateEventForm from "./Features/Events/UpdateEventForm";
 import UpdateItineraryForm from "./Features/Itineraries/UpdateItineraryForm";
+import MemberForm from "./MemberForm";
+import PickMembership from "./PickMembership";
+import PickRooms from "./PickRooms";
 
 function App() {
   return (
@@ -17,12 +20,9 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/module3-project-gamma/ItineraryForm" element={<ItineraryForm />} />
-            <Route path="/module3-project-gamma/EventForm" element={<EventForm />} />
-            <Route path="/module3-project-gamma/UpdateEvent" element={<UpdateEventForm />} />
-            <Route path="/module3-project-gamma/Itineraries" element={<Itineraries />} />
-            <Route path="/module3-project-gamma/Events" element={<Events />} />
-            <Route path="/module3-project-gamma/ItineraryDetail" element={<ItineraryDetail />} />
+            <Route path="/form" element={<MemberForm />} />
+            <Route path="/step1" element={<PickMembership />} />
+            <Route path="/step2" element={<PickRooms />} />
             <Route
               path="/module3-project-gamma/UpdateItineraryForm"
               element={<UpdateItineraryForm />}
