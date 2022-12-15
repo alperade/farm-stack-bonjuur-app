@@ -59,12 +59,12 @@ function Nav() {
 
   return (
     <>
-      <nav className="navbar" style={{backgroundColor: '#eab676'}}>
-        <div className="container-fluid" >
+      <nav className="navbar" style={{backgroundColor: '#b3b3ff'}}>
+        <div className="container-fluid" style={{marginLeft: '10rem'}}>
             <a className="navbar-brand" href="/">
-              <img src={logo} alt="Bonjuur" style={{width: "20vw"}} />
+              <img src={logo} alt="Bonjuur" style={{width: "10vw", display:"block", width:"50%", height:"auto"}} />
             </a>
-            <div className="navbar-end">
+            <div className="navbar-end" style={{marginRight: '10rem'}}>
               <div className="navbar-item">
                 {tokenLoading ? (
                   <LoginButtons show={false} />

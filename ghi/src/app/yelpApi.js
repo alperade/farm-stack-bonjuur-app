@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const yelpApi = createApi({
   reducerPath: "restaurants",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_FOMORE_API_HOST,
+    baseUrl: process.env.REACT_APP_BONJUUR_API_HOST,
   }),
   endpoints: (builder) => ({
     getRestaurants: builder.query({

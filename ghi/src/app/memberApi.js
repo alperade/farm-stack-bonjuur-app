@@ -1,21 +1,21 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const itineraryApi = createApi({
-  reducerPath: "itineraries",
+export const memberApi = createApi({
+  reducerPath: "members",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.REACT_APP_BONJUUR_API_HOST,
   }),
-  tagTypes: ["Itineraries"],
+  tagTypes: ["Members"],
   endpoints: (builder) => ({
-    getItineraries: builder.query({
+    getMembers: builder.query({
       query: () => {
         return {
-          url: `/api/itineraries`,
+          url: `/api/members`,
         };
       },
-      providesTags: ["Itineraries"],
+      providesTags: ["Members"],
     }),
-    addItinerary: builder.mutation({
+    addMember: builder.mutation({
       query: (form) => {
         const formData = new FormData(form);
         const entries = Array.from(formData.entries());
@@ -24,26 +24,25 @@ export const itineraryApi = createApi({
           return acc;
         }, {});
         data["start_date"] = data.start_date + "T00:00:00.000Z";
-        data["end_date"] = data.end_date + "T00:00:00.000Z";
         return {
-          method: "post",
-          url: `/api/itineraries`,
-          credentials: "include",
-          body: data,
+        method: "post",
+        url: `/api/members`,
+        credentials: "include",
+        body: data,
         };
-      },
-      invalidatesTags: ["Itineraries"],
+        },
+      invalidatesTags: ["Members"],
     }),
-    deleteItinerary: builder.mutation({
-      query: (itineraryId) => {
+    deleteMember: builder.mutation({
+      query: (memberId) => {
         return {
           method: "delete",
-          url: `/api/itineraries/${itineraryId}`,
+          url: `/api/members/${memberId}`,
         };
       },
-      invalidatesTags: ["Itineraries"],
+      invalidatesTags: ["Members"],
     }),
-    updateItinerary: builder.mutation({
+    updateMember: builder.mutation({
       query: (form) => {
         const formData = new FormData(form);
         const entries = Array.from(formData.entries());
@@ -52,11 +51,10 @@ export const itineraryApi = createApi({
           return acc;
         }, {});
         data["start_date"] = data.start_date + "T00:00:00.000Z";
-        data["end_date"] = data.end_date + "T00:00:00.000Z";
-        const itineraryId = data["itinerary"];
+        const memberId = data["id"];
         return {
           method: "put",
-          url: `/api/itineraries/${itineraryId}`,
+          url: `/api/members/${memberId}`,
           credentials: "include",
           body: data,
         };
@@ -66,8 +64,8 @@ export const itineraryApi = createApi({
 });
 
 export const {
-  useGetItinerariesQuery,
-  useAddItineraryMutation,
-  useDeleteItineraryMutation,
-  useUpdateItineraryMutation,
-} = itineraryApi;
+  useGetMembersQuery,
+  useAddMemberMutation,
+  useDeleteMemberMutation,
+  useUpdateMemberMutation,
+} = memberApi;

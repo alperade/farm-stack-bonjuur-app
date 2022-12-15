@@ -50,7 +50,7 @@ class MemberIn(BaseModel):
     start_date: datetime
     time_slot: str
     cleaner: Optional[str]
-    is_active: bool
+    is_active: Optional[bool]
 
 
 class Member(MemberIn):

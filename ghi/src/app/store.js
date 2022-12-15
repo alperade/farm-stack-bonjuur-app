@@ -7,6 +7,8 @@ import { searchSlice } from "./searchSlice";
 import { accountSlice } from './accountSlice';
 import { itinerarySlice } from "./itinerarySlice";
 import { apiSlice } from "./accountApi";
+import { memberSlice } from "./memberSlice";
+import { memberApi } from "./memberApi";
 
 export const store = configureStore({
   reducer: {
@@ -17,13 +19,18 @@ export const store = configureStore({
     [yelpApi.reducerPath]: yelpApi.reducer,
     [accountSlice.name]: accountSlice.reducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
+    [memberSlice.reducerPath]: memberSlice.reducer,
+    [memberApi.reducerPath]: memberApi.reducer,
   },
+
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware()
       .concat(itineraryApi.middleware)
       .concat(yelpApi.middleware)
       .concat(eventApi.middleware)
-      .concat(apiSlice.middleware);
+      .concat(apiSlice.middleware)
+      .concat(memberApi.middleware);
+
   },
 });
 

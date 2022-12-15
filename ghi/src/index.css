@@ -43,7 +43,7 @@ code {
 }
 
 .bg-color {
-  background-color: #eeeee4;
+  background-color: #f0f0f0;
   min-height: 100vh;
   max-height: 100%;
 }
@@ -54,7 +54,7 @@ code {
 }
 
 .nav-color {
-  background-color: #eeeee4;
+  background-color: #b3b3ff;
   border-radius: 5px;
   font-weight: bold;
 }

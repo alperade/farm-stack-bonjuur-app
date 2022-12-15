@@ -17,7 +17,6 @@ async def create_member(
     repo: MemberQueries = Depends(),
 ):
     member = repo.create(member)
-    await socket_manager.broadcast_refetch()
     return member
 
 
@@ -31,7 +30,6 @@ async def delete_member(
     member_id: str,
     repo: MemberQueries = Depends(),
 ):
-    await socket_manager.broadcast_refetch()
     repo.delete(id=member_id)
     return True
 

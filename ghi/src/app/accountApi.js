@@ -4,7 +4,7 @@ import { clearForm } from "./accountSlice";
 export const apiSlice = createApi({
   reducerPath: "fomore",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_FOMORE_API_HOST,
+    baseUrl: process.env.REACT_APP_BONJUUR_API_HOST,
     prepareHeaders: (headers, { getState }) => {
       const selector = apiSlice.endpoints.getToken.select();
       const { data: tokenData } = selector(getState());
