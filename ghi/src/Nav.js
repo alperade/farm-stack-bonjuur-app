@@ -1,6 +1,3 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import { useGetTokenQuery, useLogOutMutation } from "./app/accountApi";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -8,8 +5,7 @@ import { showModal, LOG_IN_MODAL, SIGN_UP_MODAL } from "./app/accountSlice";
 import LogInModal from "./Features/Misc/LogInModal";
 import SignUpModal from "./Features/Misc/SignUpModal";
 import { useEffect } from "react";
-import logo from "./media/fomore-dark.png";
-import { NavLink } from "react-bootstrap";
+import logo from "./media/logo.png";
 import { updateItinerary } from "./app/itinerarySlice";
 
 function LoginButtons(props) {
@@ -20,13 +16,15 @@ function LoginButtons(props) {
     <div className={classNames}>
       <button
         onClick={() => dispatch(showModal(SIGN_UP_MODAL))}
-        className="button is-primary"
+        className="button"
+        style={{backgroundColor:"#eeeee4"}}
       >
         <strong>Sign up</strong>
       </button>
       <button
         onClick={() => dispatch(showModal(LOG_IN_MODAL))}
-        className="button is-light"
+        className="button"
+        style={{backgroundColor:"#eeeee4"}}
       >
         Log in
       </button>
@@ -43,7 +41,7 @@ function LogoutButton() {
     const actionId = updateItinerary({ itineraryId: "" });
     dispatch(actionId);
     if (data) {
-      navigate('/module3-project-gamma/');
+      navigate('/');
     }
   });
 
@@ -56,34 +54,16 @@ function LogoutButton() {
   );
 }
 
-function FomoreNav() {
+function Nav() {
   const { data: token, isLoading: tokenLoading } = useGetTokenQuery();
 
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Container fluid>
-          <NavLink href="/module3-project-gamma/" className="nav-logo">
-            <img alt="logo" src={logo}></img>
-          </NavLink>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Nav.Link href="/module3-project-gamma/">Home</Nav.Link>
-              {token ? (
-                <>
-                  <Nav.Link href="/module3-project-gamma/ItineraryForm">Create Itinerary</Nav.Link>
-                  <Nav.Link href="/module3-project-gamma/EventForm">Create Event</Nav.Link>
-                  <Nav.Link href="/module3-project-gamma/Itineraries">My Itineraries</Nav.Link>
-                </>
-              ) : (
-                <p className="d-none"></p>
-              )}
-            </Nav>
+      <nav className="navbar" style={{backgroundColor: '#eab676'}}>
+        <div className="container-fluid" >
+            <a className="navbar-brand" href="/">
+              <img src={logo} alt="Bonjuur" style={{width: "20vw"}} />
+            </a>
             <div className="navbar-end">
               <div className="navbar-item">
                 {tokenLoading ? (
@@ -95,13 +75,12 @@ function FomoreNav() {
                 )}
               </div>
             </div>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+        </div>
+      </nav>
       <LogInModal />
       <SignUpModal />
     </>
   );
 }
 
-export default FomoreNav;
+export default Nav;

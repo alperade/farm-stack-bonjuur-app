@@ -16,7 +16,7 @@ function App() {
         <Nav />
         <div className="container">
           <Routes>
-            <Route path="/module3-project-gamma/" element={<Main />} />
+            <Route path="/" element={<Main />} />
             <Route path="/module3-project-gamma/ItineraryForm" element={<ItineraryForm />} />
             <Route path="/module3-project-gamma/EventForm" element={<EventForm />} />
             <Route path="/module3-project-gamma/UpdateEvent" element={<UpdateEventForm />} />

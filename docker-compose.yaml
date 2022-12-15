@@ -26,12 +26,12 @@ services:
 
   fastapi:
     build:
-      context: ./bonjuur-api
+      context: ./api
       dockerfile: ./Dockerfile.dev
     ports:
       - 8000:8000
     volumes:
-      - ./bonjuur-api:/app
+      - ./api:/app
     environment:
       MONGO_URL: mongodb://admin:admin@mongo
       DATABASE_NAME: bonjuur-db
