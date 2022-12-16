@@ -48,6 +48,7 @@ class MemberIn(BaseModel):
     email: str
     phone: str
     address: str
+    apt: str
     start_date: datetime
     time_slot: str
     cleaner: Optional[str]

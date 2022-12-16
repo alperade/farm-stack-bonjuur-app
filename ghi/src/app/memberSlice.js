@@ -8,6 +8,7 @@ const initialState = {
   email: "",
   phone: "",
   address: "",
+  apt: "",
   start_date: "",
   time_slot: "",
   cleaner: "Pema",

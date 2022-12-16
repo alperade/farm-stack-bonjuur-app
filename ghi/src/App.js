@@ -1,17 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Main";
 import Nav from "./Nav";
-import ItineraryForm from "./Features/Itineraries/ItineraryForm";
-import EventForm from "./Features/Events/EventForm";
-import Itineraries from "./Features/Itineraries/ListItinerary";
-import Events from "./Features/Events/ListEvents_playaround";
-import ItineraryDetail from "./Features/Itineraries/ItineraryDetail";
-import UpdateEventForm from "./Features/Events/UpdateEventForm";
-import UpdateItineraryForm from "./Features/Itineraries/UpdateItineraryForm";
 import MemberForm from "./MemberForm";
 import PickMembership from "./Step1Membership";
-import PickRooms from "./Step2Rooms";
-import PickBuilding from "./Step3Building";
+import PickBuilding from "./Step2Building";
+import HouseDetails from "./Step3HouseDetails";
+import PickDateTime from "./Step4DateTime";
+import Results from "./Success";
 
 function App() {
   return (
@@ -23,12 +18,10 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/form" element={<MemberForm />} />
             <Route path="/step1" element={<PickMembership />} />
-            <Route path="/step2" element={<PickRooms />} />
-            <Route path="/step3" element={<PickBuilding />} />
-            <Route
-              path="/module3-project-gamma/UpdateItineraryForm"
-              element={<UpdateItineraryForm />}
-            />
+            <Route path="/step2" element={<PickBuilding />} />
+            <Route path="/step3" element={<HouseDetails />} />
+            <Route path="/step4" element={<PickDateTime />} />
+            <Route path="/success" element={<Results />} />
           </Routes>
         </div>
       </BrowserRouter>

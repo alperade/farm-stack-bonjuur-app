@@ -19,7 +19,7 @@ export const store = configureStore({
     [yelpApi.reducerPath]: yelpApi.reducer,
     [accountSlice.name]: accountSlice.reducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
-    [memberSlice.reducerPath]: memberSlice.reducer,
+    [memberSlice.name]: memberSlice.reducer,
     [memberApi.reducerPath]: memberApi.reducer,
   },
 
@@ -30,7 +30,6 @@ export const store = configureStore({
       .concat(eventApi.middleware)
       .concat(apiSlice.middleware)
       .concat(memberApi.middleware);
-
   },
 });
 
