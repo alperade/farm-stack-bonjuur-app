@@ -3,7 +3,7 @@ import ItineraryList from "./Features/Itineraries/Itinerary";
 import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
 import MemberForm from "./MemberForm";
-import PickMembership from "./PickMembership";
+import PickMembership from "./Step1Membership";
 
 
 function Main() {

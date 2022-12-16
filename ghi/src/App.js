@@ -9,8 +9,8 @@ import ItineraryDetail from "./Features/Itineraries/ItineraryDetail";
 import UpdateEventForm from "./Features/Events/UpdateEventForm";
 import UpdateItineraryForm from "./Features/Itineraries/UpdateItineraryForm";
 import MemberForm from "./MemberForm";
-import PickMembership from "./PickMembership";
-import PickRooms from "./PickRooms";
+import PickMembership from "./Step1Membership";
+import PickRooms from "./Step2Rooms";
 
 function App() {
   return (

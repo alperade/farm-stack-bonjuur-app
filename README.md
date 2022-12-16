@@ -24,3 +24,4 @@ RESTful web application for scheduling cleaning appointments.
 
 ## To-do
 - Add name and apt number to model
+- More than 3 bedrooms page
