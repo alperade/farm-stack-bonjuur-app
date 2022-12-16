@@ -11,6 +11,7 @@ import UpdateItineraryForm from "./Features/Itineraries/UpdateItineraryForm";
 import MemberForm from "./MemberForm";
 import PickMembership from "./Step1Membership";
 import PickRooms from "./Step2Rooms";
+import PickBuilding from "./Step3Building";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/form" element={<MemberForm />} />
             <Route path="/step1" element={<PickMembership />} />
             <Route path="/step2" element={<PickRooms />} />
+            <Route path="/step3" element={<PickBuilding />} />
             <Route
               path="/module3-project-gamma/UpdateItineraryForm"
               element={<UpdateItineraryForm />}

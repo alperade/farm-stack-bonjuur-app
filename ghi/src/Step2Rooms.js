@@ -16,14 +16,13 @@ export function PickRooms() {
 
 
   function handleSubmit() {
-    console.log(bathrooms)
     const action = updateMember({
         bedrooms: bedrooms,
         bathrooms: bathrooms,
         pets: pets,
      });
     dispatch(action);
-    navigate('/step1')
+    navigate('/step3')
   }
 
   return (
