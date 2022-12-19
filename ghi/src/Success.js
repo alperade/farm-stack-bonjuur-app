@@ -7,26 +7,14 @@ function MembershipDetails() {
   if (isLoading && tokenLoading) {
     return <progress className="progress is-primary" max="100"></progress>;
   }
-  if (memberData) {
-    const userEmail = tokenData && tokenData.account.email;
-    let a = memberData.members.filter(member => member.email === "alper@fomore.com");
-    console.log(a)
 
-
-
-
-
-
-
-  }
-
-//   let loadedResults = data.members
-
-//   console.log(Object.entries(loadedResults))
+  if (memberData && tokenData) {
+    let userEmail = tokenData && tokenData.account.email;
+    let result = memberData.members.filter(member => member.email == userEmail)[0];
 
   return (
         <div className="col-4 mx-auto">
-          {/* <table className="table bg-transparent">
+          <table className="table bg-transparent">
             <tbody>
               <tr>
                 <td>Email</td>
@@ -69,9 +57,10 @@ function MembershipDetails() {
                 <td>{result.pets}</td>
               </tr>
             </tbody>
-          </table> */}
+          </table>
         </div>
   );
+}
 }
 
 export default MembershipDetails;

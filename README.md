@@ -25,4 +25,5 @@ RESTful web application for scheduling cleaning appointments.
 ## To-do
 - Add name and apt number to model
 - Create a page for sign up for updates (if address is not serviced)
-- Logged in + paid page
+- Stop subscription page (turn is_active to false)
+- Admin page (shows is active false and updated on date)

@@ -9,7 +9,7 @@ db.accounts.insertOne({
 });
 db.accounts.insertOne({
   _id: ObjectId("637d2d4fdfb3e725298257cf"),
-  email: "alper@fomore.com",
+  email: "alper@bonjuur.com",
   password: "$2b$12$n.6H7Ae1Rc4zRohLAA4NtOGJmVX/UuRcjTwixigQ65dWyUUvuV1pa",
   full_name: "alper",
 });

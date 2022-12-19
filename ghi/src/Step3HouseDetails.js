@@ -14,10 +14,10 @@ const HouseDetails = () => {
   const [humans, setHumans] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const { data: tokenData } = useGetTokenQuery();
-  // if (tokenData) {
-  //     navigate('/details')
-  //   }
+  const { data: tokenData } = useGetTokenQuery();
+  if (tokenData) {
+      navigate('/details')
+    }
 
 
   function handleSubmit() {

@@ -10,10 +10,10 @@ const PickDateTime = () => {
   const [time_slot, setTime] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const { data: tokenData } = useGetTokenQuery();
-  // if (tokenData) {
-  //     navigate('/details')
-  //   }
+  const { data: tokenData } = useGetTokenQuery();
+  if (tokenData) {
+      navigate('/details')
+    }
 
   function handleSubmit() {
     const action = updateMember({
