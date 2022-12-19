@@ -6,7 +6,9 @@ import PickMembership from "./Step1Membership";
 import PickBuilding from "./Step2Building";
 import HouseDetails from "./Step3HouseDetails";
 import PickDateTime from "./Step4DateTime";
-import Results from "./Success";
+import Review from "./Step6Review";
+
+import SignupStep from "./Step5Signup";
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
             <Route path="/step2" element={<PickBuilding />} />
             <Route path="/step3" element={<HouseDetails />} />
             <Route path="/step4" element={<PickDateTime />} />
-            <Route path="/success" element={<Results />} />
+            <Route path="/step5" element={<SignupStep />} />
+            <Route path="/review" element={<Review />} />
           </Routes>
         </div>
       </BrowserRouter>

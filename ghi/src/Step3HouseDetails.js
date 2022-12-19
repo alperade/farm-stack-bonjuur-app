@@ -10,6 +10,7 @@ const HouseDetails = () => {
   const [bedrooms, setBedrooms] = useState("");
   const [bathrooms, setBathrooms] = useState("");
   const [pets, setPets] = useState("");
+  const [humans, setHumans] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -21,9 +22,10 @@ const HouseDetails = () => {
       bedrooms:bedrooms,
       bathrooms: bathrooms,
       pets: pets,
+      humans: humans,
     });
     dispatch(action);
-    if (apt !== "" && phone !== "" && bedrooms !== "" && bathrooms !== "" && pets !== "") {
+    if (apt !== "" && phone !== "" && bedrooms !== "" && bathrooms !== "" && pets !== "" && humans !== "") {
       navigate('/step4')
     }
   }
@@ -45,7 +47,7 @@ const HouseDetails = () => {
     <label htmlFor="validationDefault02" className="form-label">Phone Number</label>
     <input
       type="tel"
-      class="form-control"
+      className="form-control"
       id="validationDefault02"
       placeholder="Phone Number"
       value={phone}
@@ -76,6 +78,15 @@ const HouseDetails = () => {
       <option value="0">No Pets</option>
       <option value="1">1</option>
       <option value="2">2 or more</option>
+    </select>
+  </div>
+  <div className="col-md-4 mx-auto">
+    <label htmlFor="validationDefault06" className="form-label">Humans</label>
+    <select className="form-select" onChange={(e) => setHumans(e.target.value)} id="validationDefault06" required>
+      <option selected disabled value="">Choose...</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3+">3 or more</option>
     </select>
   </div>
   <div className="col-md-4 mx-auto" style={{marginTop:"1rem"}}>

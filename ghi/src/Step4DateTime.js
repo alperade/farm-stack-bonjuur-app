@@ -10,7 +10,6 @@ const PickDateTime = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
   function handleSubmit() {
     const action = updateMember({
       start_date: start_date,
@@ -18,7 +17,7 @@ const PickDateTime = () => {
     });
     dispatch(action);
     if (start_date !== "" && time_slot !== "") {
-      navigate('/success')
+      navigate('/step5')
     }
   }
 
@@ -38,9 +37,9 @@ const PickDateTime = () => {
     <label htmlFor="validationDefault02" className="form-label">Time Slot</label>
     <select className="form-select" onChange={(e) => setTime(e.target.value)} id="validationDefault02" required>
       <option selected disabled value="">Choose...</option>
-      <option value="0">Morning 9AM - 12PM</option>
-      <option value="1">Afternoon 1PM - 3PM</option>
-      <option value="2">Evening 3PM - 5PM</option>
+      <option value="Morning 9AM - 12PM">Morning 9AM - 12PM</option>
+      <option value="Afternoon 1PM - 3PM">Afternoon 1PM - 3PM</option>
+      <option value="Evening 3PM - 5PM">Evening 3PM - 5PM</option>
     </select>
   </div>
   <div className="col-md-4 mx-auto" style={{marginTop:"1rem"}}>
