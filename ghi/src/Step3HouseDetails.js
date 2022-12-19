@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateMember } from "./app/memberSlice";
 import { useNavigate } from "react-router-dom";
+import { useGetTokenQuery } from "./app/accountApi";
 
 
 const HouseDetails = () => {
@@ -13,6 +14,10 @@ const HouseDetails = () => {
   const [humans, setHumans] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // const { data: tokenData } = useGetTokenQuery();
+  // if (tokenData) {
+  //     navigate('/details')
+  //   }
 
 
   function handleSubmit() {

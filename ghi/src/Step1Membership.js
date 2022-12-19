@@ -2,11 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateMember } from "./app/memberSlice";
+import { useGetTokenQuery } from "./app/accountApi";
 
 
 export function PickMembership() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // const { data: tokenData } = useGetTokenQuery();
+  // if (tokenData) {
+  //   navigate('/details')
+  //   }
 
 
   function handleInput(e) {

@@ -14,58 +14,58 @@ export function Review() {
     const { data: tokenData } = useGetTokenQuery();
     const account = tokenData.account
     if (data) {
-        navigate('/')
+        navigate('/details')
     }
 
 
 
     return (
-        <>
-            <div className="col-4 mx-auto">
-            <table class="table bg-transparent">
+      <>
+        <div className="col-4 mx-auto">
+          <table className="table bg-transparent">
             <tbody>
-                <tr>
+              <tr>
                 <td>Email</td>
                 <td>{account.email}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Membership</td>
                 <td>{results.membership}</td>
-                </tr>
-                 <tr>
+              </tr>
+              <tr>
                 <td>Start Date</td>
                 <td>{results.start_date}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Time Slot</td>
                 <td>{results.time_slot}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Address</td>
                 <td>{results.address}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Apt Number</td>
                 <td>{results.apt}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Phone</td>
                 <td>{results.phone}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Bedroom</td>
                 <td>{results.bedrooms}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Bathrooms</td>
                 <td>{results.bathrooms}</td>
-                </tr>
-                <tr>
+              </tr>
+              <tr>
                 <td>Pets</td>
                 <td>{results.pets}</td>
-                </tr>
+              </tr>
             </tbody>
-            </table>
+          </table>
           <Form
             className="register-form"
             method="post"

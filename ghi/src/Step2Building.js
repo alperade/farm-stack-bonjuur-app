@@ -2,12 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateMember } from "./app/memberSlice";
+import { useGetTokenQuery } from "./app/accountApi";
 
 export function PickBuilding() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const buildings = ["200 W End Avenue", "606 W 57th Street", "455 W 37th Street", "595 Dean St."]
-    const isLoading = buildings.isLoading;
+    // const { data: tokenData } = useGetTokenQuery();
+    // if (tokenData) {
+    //   navigate('/details')
+    //   }
 
     function handleInput(e) {
         let address = e.target.attributes.value.value
