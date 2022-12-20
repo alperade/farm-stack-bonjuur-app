@@ -8,6 +8,7 @@ import HouseDetails from "./Step3HouseDetails";
 import PickDateTime from "./Step4DateTime";
 import Review from "./Step6Review";
 import MembershipDetails from "./Step7Success";
+import WaitList from "./WaitList";
 
 import SignupStep from "./Step5Signup";
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/step5" element={<SignupStep />} />
             <Route path="/review" element={<Review />} />
             <Route path="/details" element={<MembershipDetails />} />
+            <Route path="/waitlist" element={<WaitList />} />
           </Routes>
         </div>
       </BrowserRouter>
