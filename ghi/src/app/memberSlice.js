@@ -5,6 +5,8 @@ const initialState = {
   bedrooms: 0,
   bathrooms: 0,
   pets: 0,
+  humans: 0,
+  full_name: "",
   email: "",
   phone: "",
   address: "",

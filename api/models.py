@@ -48,10 +48,13 @@ class MemberIn(BaseModel):
     humans: int
     email: str
     phone: str
+    full_name: str
     address: str
     apt: str
     start_date: datetime
     time_slot: str
+    created_on: Optional[datetime]
+    updated_on: Optional[datetime]
     cleaner: Optional[str]
     is_active: Optional[bool]
 

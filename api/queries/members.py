@@ -3,6 +3,7 @@ from typing import List
 from .client import Queries
 from models import MemberIn, MemberOut
 from pymongo.collection import ReturnDocument
+from datetime import datetime
 
 
 class MemberQueries(Queries):
@@ -11,6 +12,8 @@ class MemberQueries(Queries):
 
     def create(self, member: MemberIn) -> MemberOut:
         props = member.dict()
+        props["is_active"] = True
+        props["created_on"] = datetime.now()
         self.collection.insert_one(props)
         props["id"] = str(props["_id"])
         return MemberOut(**props)
@@ -36,6 +39,8 @@ class MemberQueries(Queries):
                 "_id": ObjectId(id),
             }
         member = self.collection.find_one(filter)
+        member["updated_on"] = datetime.now()
+        member["is_active"] = False
         updated_member = self.collection.find_one_and_update(
                                     member,
                                     {"$set": body},

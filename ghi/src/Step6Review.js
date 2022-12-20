@@ -84,6 +84,13 @@ export function Review() {
                       readOnly
                     ></input>
                     <input
+                      name="full_name"
+                      as="textarea"
+                      value={account.full_name ? account.full_name : ""}
+                      style={{ display: "none" }}
+                      readOnly
+                    ></input>
+                    <input
                       name="membership"
                       as="textarea"
                       value={results.membership ? results.membership : ""}

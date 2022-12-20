@@ -1,5 +1,6 @@
 import { useGetTokenQuery } from "./app/accountApi";
 import { useGetMembersQuery } from "./app/memberApi";
+import { useCancelMembershipMutation } from "./app/memberApi";
 
 function MembershipDetails() {
   const { data: tokenData, isLoading: tokenLoading } = useGetTokenQuery();

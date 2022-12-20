@@ -7,7 +7,7 @@ import PickBuilding from "./Step2Building";
 import HouseDetails from "./Step3HouseDetails";
 import PickDateTime from "./Step4DateTime";
 import Review from "./Step6Review";
-import MembershipDetails from "./Success";
+import MembershipDetails from "./Step7Success";
 
 import SignupStep from "./Step5Signup";
 
