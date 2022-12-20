@@ -27,3 +27,4 @@ RESTful web application for scheduling cleaning appointments.
 - Stop subscription page (turn is_active to false)
 - Admin page (shows is active false and updated on date)
 - Forgot password with email reset (https://www.geeksforgeeks.org/sending-email-using-fastapi-framework-in-python/)
+- Update unit tests

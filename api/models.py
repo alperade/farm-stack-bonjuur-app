@@ -66,50 +66,24 @@ class Member(MemberIn):
 class MemberOut(MemberIn):
     id: str
 
+
 class MemberList(BaseModel):
     members: List[MemberOut]
 
-# class ItineraryIn(BaseModel):
-#     name: str
-#     start_date: datetime
-#     end_date: datetime
-#     location: str
-#     account_id: str
+
+class WaitListEmailIn(BaseModel):
+    email: str
+    address: str
+    created_on: Optional[datetime]
 
 
-# class Itinerary(ItineraryIn):
-#     id: PydanticObjectId
+class WaitListEmail(WaitListEmailIn):
+    id: PydanticObjectId
 
 
-# class ItineraryOut(ItineraryIn):
-#     id: str
+class WaitListEmailOut(WaitListEmailIn):
+    id: str
 
 
-# class ItineraryList(BaseModel):
-#     itineraries: List[ItineraryOut]
-
-
-# class EventIn(BaseModel):
-#     name: str
-#     date: datetime
-#     location: str
-#     category: str
-#     venue: Optional[str]
-#     rating: Optional[str]
-#     address: Optional[str]
-#     description: str
-#     itinerary_id: str
-#     image_url: Optional[str]
-#     url: Optional[str]
-
-
-# class Event(EventIn):
-#     id: PydanticObjectId
-
-
-# class EventOut(EventIn):
-#     id: str
-
-
-# class EventList(BaseModel):
-#     events: List[EventOut]
+class WaitListEmailList(BaseModel):
+    waitlistemails: List[WaitListEmailOut]

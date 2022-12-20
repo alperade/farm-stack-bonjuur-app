@@ -3,5 +3,5 @@ FROM mongo:6
 # Copy setup files into MongoDB database
 # initialization directory.
 COPY 01-create-unique-account-index.js /docker-entrypoint-initdb.d/01-create-unique-account-index.js
-COPY 02-create-itineraries.js /docker-entrypoint-initdb.d/02-create-itineraries.js
-COPY 03-create-events.js /docker-entrypoint-initdb.d/03-create-events.js
+COPY 02-create-members.js /docker-entrypoint-initdb.d/02-create-members.js
+COPY 03-create-waitlistemails.js /docker-entrypoint-initdb.d/03-create-waitlistemails.js

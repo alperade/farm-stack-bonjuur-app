@@ -5,6 +5,7 @@ import os
 from routers import auth
 from routers import accounts
 from routers import members
+from routers import waitlistemails
 
 app = FastAPI()
 
@@ -24,3 +25,4 @@ app.add_middleware(
 app.include_router(auth.authenticator.router)
 app.include_router(accounts.router)
 app.include_router(members.router, prefix="/api")
+app.include_router(waitlistemails.router, prefix="/api")
