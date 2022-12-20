@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { updateMember } from "./app/memberSlice";
 import { useNavigate } from "react-router-dom";
 import { useGetTokenQuery } from "./app/accountApi";
+import { useGetMembersQuery } from "./app/memberApi";
 
 
 const HouseDetails = () => {
@@ -14,10 +15,15 @@ const HouseDetails = () => {
   const [humans, setHumans] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { data: memberData } = useGetMembersQuery();
   const { data: tokenData } = useGetTokenQuery();
-  if (tokenData) {
-      navigate('/details')
-    }
+
+  if (memberData && tokenData) {
+      let userEmail = tokenData && tokenData.account.email;
+      let result = memberData.members.filter(member => member.email == userEmail)[0];
+      if (result) {
+        navigate('/details')
+      }}
 
 
   function handleSubmit() {

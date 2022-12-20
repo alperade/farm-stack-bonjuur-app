@@ -14,13 +14,13 @@ function LoginButtons(props) {
 
   return (
     <div className={classNames}>
-      <button
+      {/* <button
         onClick={() => dispatch(showModal(SIGN_UP_MODAL))}
         className="button"
         style={{backgroundColor:"#eeeee4"}}
       >
         <strong>Sign up</strong>
-      </button>
+      </button> */}
       <button
         onClick={() => dispatch(showModal(LOG_IN_MODAL))}
         className="button"

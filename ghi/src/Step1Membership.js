@@ -3,16 +3,21 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateMember } from "./app/memberSlice";
 import { useGetTokenQuery } from "./app/accountApi";
+import { useGetMembersQuery } from "./app/memberApi";
 
 
 export function PickMembership() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { data: memberData } = useGetMembersQuery();
   const { data: tokenData } = useGetTokenQuery();
-  if (tokenData) {
-    navigate('/details')
-    }
 
+  if (memberData && tokenData) {
+      let userEmail = tokenData && tokenData.account.email;
+      let result = memberData.members.filter(member => member.email == userEmail)[0];
+      if (result) {
+        navigate('/details')
+      }}
 
   function handleInput(e) {
     const action = updateMember({ membership: e.target.value});

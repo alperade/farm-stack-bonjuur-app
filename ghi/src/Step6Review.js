@@ -5,6 +5,7 @@ import { useAddMemberMutation } from "./app/memberApi";
 import { preventDefault } from "./app/utils";
 import { Button, Container, Row, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { useGetMembersQuery } from "./app/memberApi";
 
 
 export function Review() {
@@ -13,9 +14,14 @@ export function Review() {
     const results = useSelector((state) => state.member)
     const { data: tokenData } = useGetTokenQuery();
     const account = tokenData.account
-    if (data) {
-        navigate('/details')
-    }
+    const { data: memberData } = useGetMembersQuery();
+
+    if (memberData && tokenData) {
+        let userEmail = tokenData && tokenData.account.email;
+        let result = memberData.members.filter(member => member.email == userEmail)[0];
+        if (result) {
+          navigate('/details')
+        }}
 
 
 

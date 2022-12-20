@@ -18,9 +18,9 @@ function App() {
         <Nav />
         <div className="container">
           <Routes>
-            <Route path="/" element={<Main />} />
+            {/* <Route path="/" element={<Main />} /> */}
             <Route path="/form" element={<MemberForm />} />
-            <Route path="/step1" element={<PickMembership />} />
+            <Route path="/" element={<PickMembership />} />
             <Route path="/step2" element={<PickBuilding />} />
             <Route path="/step3" element={<HouseDetails />} />
             <Route path="/step4" element={<PickDateTime />} />
