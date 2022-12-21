@@ -9,6 +9,7 @@ import { itinerarySlice } from "./itinerarySlice";
 import { apiSlice } from "./accountApi";
 import { memberSlice } from "./memberSlice";
 import { memberApi } from "./memberApi";
+import { waitlistApi } from "./waitlistApi";
 
 export const store = configureStore({
   reducer: {
@@ -21,6 +22,7 @@ export const store = configureStore({
     [apiSlice.reducerPath]: apiSlice.reducer,
     [memberSlice.name]: memberSlice.reducer,
     [memberApi.reducerPath]: memberApi.reducer,
+    [waitlistApi.reducerPath]: waitlistApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) => {
@@ -29,7 +31,8 @@ export const store = configureStore({
       .concat(yelpApi.middleware)
       .concat(eventApi.middleware)
       .concat(apiSlice.middleware)
-      .concat(memberApi.middleware);
+      .concat(memberApi.middleware)
+      .concat(waitlistApi.middleware);
   },
 });
 

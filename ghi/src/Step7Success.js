@@ -2,9 +2,11 @@ import { useGetTokenQuery } from "./app/accountApi";
 import { useGetMembersQuery } from "./app/memberApi";
 import { useCancelMembershipMutation } from "./app/memberApi";
 
+
 function MembershipDetails() {
   const { data: tokenData, isLoading: tokenLoading } = useGetTokenQuery();
   const { data: memberData, isLoading } = useGetMembersQuery();
+
   if (isLoading && tokenLoading) {
     return <progress className="progress is-primary" max="100"></progress>;
   }

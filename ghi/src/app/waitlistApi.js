@@ -1,21 +1,21 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const memberApi = createApi({
-  reducerPath: "members",
+export const waitlistApi = createApi({
+  reducerPath: "waitlistemails",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.REACT_APP_BONJUUR_API_HOST,
   }),
-  tagTypes: ["Members"],
+  tagTypes: ["WaitListEmails"],
   endpoints: (builder) => ({
-    getMembers: builder.query({
+    getWaitListEmails: builder.query({
       query: () => {
         return {
-          url: `/api/members`,
+          url: `/api/waitlistemails`,
         };
       },
-      providesTags: ["Members"],
+      providesTags: ["WaitListEmails"],
     }),
-    addMember: builder.mutation({
+    addWaitListEmail: builder.mutation({
       query: (form) => {
         const formData = new FormData(form);
         const entries = Array.from(formData.entries());
@@ -23,49 +23,19 @@ export const memberApi = createApi({
           acc[key] = value;
           return acc;
         }, {});
-        data["start_date"] = data.start_date + "T00:00:00.000Z";
         return {
         method: "post",
-        url: `/api/members`,
+        url: `/api/waitlistemails`,
         credentials: "include",
         body: data,
         };
         },
-      invalidatesTags: ["Members"],
+      invalidatesTags: ["WaitListEmails"],
     }),
-    deleteMember: builder.mutation({
-      query: (memberId) => {
-        return {
-          method: "delete",
-          url: `/api/members/${memberId}`,
-        };
-      },
-      invalidatesTags: ["Members"],
     }),
-    updateMember: builder.mutation({
-      query: (form) => {
-        const formData = new FormData(form);
-        const entries = Array.from(formData.entries());
-        const data = entries.reduce((acc, [key, value]) => {
-          acc[key] = value;
-          return acc;
-        }, {});
-        data["start_date"] = data.start_date + "T00:00:00.000Z";
-        const memberId = data["id"];
-        return {
-          method: "put",
-          url: `/api/members/${memberId}`,
-          credentials: "include",
-          body: data,
-        };
-      },
-    }),
-  }),
-});
+  });
 
 export const {
-  useGetMembersQuery,
-  useAddMemberMutation,
-  useDeleteMemberMutation,
-  useUpdateMemberMutation,
-} = memberApi;
+  useGetWaitListEmailsQuery,
+  useAddWaitListEmailMutation,
+} = waitlistApi;
