@@ -26,3 +26,8 @@ RESTful web application for scheduling cleaning appointments.
 - Admin page (shows is active false and updated on date)
 - Forgot password with email reset (https://www.geeksforgeeks.org/sending-email-using-fastapi-framework-in-python/)
 - Stop subscription page (turn is_active to false)
+
+## Deployment Resources
+- https://learn.microsoft.com/en-us/azure/app-service/tutorial-custom-container?tabs=azure-cli&pivots=container-linux
+- docker requires you to specify a --platform=linux/amd64 each time you need to build or run an amd64 image/container.
+- https://stackoverflow.com/questions/60163440/docker-fails-to-pull-the-image-from-within-azure-app-service
