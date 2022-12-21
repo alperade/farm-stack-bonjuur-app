@@ -17,6 +17,7 @@ function MembershipDetails() {
 
   return (
         <div className="col-4 mx-auto">
+          <h3 style={{marginTop: "3vh"}}>Confirmed Reservation</h3>
           <table className="table bg-transparent">
             <tbody>
               <tr>

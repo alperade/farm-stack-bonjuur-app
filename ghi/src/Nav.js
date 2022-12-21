@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { showModal, LOG_IN_MODAL, SIGN_UP_MODAL } from "./app/accountSlice";
 import LogInModal from "./Features/Misc/LogInModal";
 import SignUpModal from "./Features/Misc/SignUpModal";
-import { useEffect } from "react";
 import logo from "./media/logo.png";
-import { updateItinerary } from "./app/itinerarySlice";
 
 function LoginButtons(props) {
   const dispatch = useDispatch();
@@ -36,14 +34,6 @@ function LogoutButton() {
   const navigate = useNavigate();
   const [logOut, { data }] = useLogOutMutation();
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    const actionId = updateItinerary({ itineraryId: "" });
-    dispatch(actionId);
-    if (data) {
-      navigate('/');
-    }
-  });
 
   return (
     <div className="buttons">

@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./Main";
 import Nav from "./Nav";
 import MemberForm from "./MemberForm";
 import PickMembership from "./Step1Membership";
@@ -19,7 +18,6 @@ function App() {
         <Nav />
         <div className="container">
           <Routes>
-            {/* <Route path="/" element={<Main />} /> */}
             <Route path="/form" element={<MemberForm />} />
             <Route path="/" element={<PickMembership />} />
             <Route path="/step2" element={<PickBuilding />} />

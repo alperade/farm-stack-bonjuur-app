@@ -14,7 +14,7 @@ export const apiSlice = createApi({
       return headers;
     },
   }),
-  tagTypes: ["Account", "Token", "Itinerary"],
+  tagTypes: ["Account", "Token"],
   endpoints: (builder) => ({
     signUp: builder.mutation({
       query: (data) => ({
@@ -68,7 +68,7 @@ export const apiSlice = createApi({
         method: "delete",
         credentials: "include",
       }),
-      invalidatesTags: ["Account", "Token", "Itinerary"],
+      invalidatesTags: ["Account", "Token"],
     }),
     getToken: builder.query({
       query: () => ({

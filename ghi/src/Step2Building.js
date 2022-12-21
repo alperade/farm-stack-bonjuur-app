@@ -33,26 +33,28 @@ export function PickBuilding() {
         <div className="card">
           <div className="card-body" >
             <div className="card-body text-center">
-        {buildings.map((building) => {
-            return (
-                <button
+              {buildings.map((building) => {
+                return (
+                  <button
                     type="button"
                     className="btn btn-outline-dark col-8 mx-auto"
                     onClick={handleInput}
                     value={building}
                     key={building}
-                    style={{margin:"1rem", padding:"1rem"}}
-                >
-
-                        {building}
-
-                </button>
-            );
-        })}
-    </div>
-    </div>
-    </div>
-    </div>
+                    style={{marginTop:"1rem", padding:"1rem"}}
+                    >{building}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <div className="card-body" >
+            <div className="card-body text-center">
+              <a href="/waitlist" className="btn btn-outline-secondary col-8 mx-auto" role="button">Address not here?<br></br>Sign up to waitlist!</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

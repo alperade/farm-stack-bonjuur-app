@@ -33,7 +33,7 @@ services:
     volumes:
       - ./api:/app
     environment:
-      MONGO_URL: mongodb://admin:admin@mongo
+      MONGO_URL: ${MONGO_URL}
       DATABASE_NAME: bonjuur-db
       SIGNING_KEY: ${SIGNING_KEY}
       YELP_API_KEY: ${YELP_API_KEY}

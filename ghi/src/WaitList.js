@@ -4,15 +4,16 @@ import { updateMember } from "./app/memberSlice";
 import { useNavigate } from "react-router-dom";
 import { useGetTokenQuery } from "./app/accountApi";
 import { useGetMembersQuery } from "./app/memberApi";
+import { useAddWaitListEmailMutation } from "./app/waitlistApi";
+import { preventDefault } from "./app/utils";
+import { Alert } from "react-bootstrap";
 
 
 const WaitList = () => {
-  const [start_date, setDate] = useState("");
-  const [time_slot, setTime] = useState("");
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [addWaitListEmail, { data }] = useAddWaitListEmailMutation();
   const { data: memberData } = useGetMembersQuery();
   const { data: tokenData } = useGetTokenQuery();
+  const navigate = useNavigate();
 
   if (memberData && tokenData) {
       let userEmail = tokenData && tokenData.account.email;
@@ -21,40 +22,40 @@ const WaitList = () => {
         navigate('/details')
       }}
 
-  function handleSubmit() {
-    const action = updateMember({
-      start_date: start_date,
-      time_slot: time_slot,
-    });
-    dispatch(action);
-    if (start_date !== "" && time_slot !== "") {
-      navigate('/step5')
-    }
+  if (data) {
+    return (
+      <div>
+        <Alert key="success" variant="success">
+          Thank you for signing up to our waitlist!
+        </Alert>
+      </div>
+    );
   }
 
   return (
-<form>
-  <div className="col-md-4 mx-auto">
-    <label htmlFor="validationDefault01" className="form-label">Start Date</label>
+<form onSubmit={preventDefault(addWaitListEmail, (e) => e.target)}>
+  <div className="col-md-4 mx-auto" style={{marginTop:"5vh"}}>
+    <label htmlFor="validationDefault01" className="form-label">Email</label>
     <input
-      type="date"
+      type="text"
       className="form-control"
-      value={start_date}
+      name="email"
       id="validationDefault01"
-      onChange={(e) => setDate(e.target.value)}
+      placeholder="Email"
       required/>
   </div>
-  <div className="col-md-4 mx-auto">
-    <label htmlFor="validationDefault02" className="form-label">Time Slot</label>
-    <select className="form-select" onChange={(e) => setTime(e.target.value)} id="validationDefault02" required>
-      <option selected disabled value="">Choose...</option>
-      <option value="Morning 9AM - 12PM">Morning 9AM - 12PM</option>
-      <option value="Afternoon 1PM - 3PM">Afternoon 1PM - 3PM</option>
-      <option value="Evening 3PM - 5PM">Evening 3PM - 5PM</option>
-    </select>
+    <div className="col-md-4 mx-auto">
+    <label htmlFor="validationDefault02" className="form-label">Address</label>
+    <input
+      type="text"
+      className="form-control"
+      name="address"
+      id="validationDefault02"
+      placeholder="Address"
+      required/>
   </div>
   <div className="col-md-4 mx-auto" style={{marginTop:"1rem"}}>
-    <button className="btn btn-primary float-end" onClick={handleSubmit} type="submit">Confirm & Review Details</button>
+    <button className="btn btn-primary float-end" type="submit">Join the waitlist!</button>
   </div>
 </form>
   );
