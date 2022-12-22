@@ -5,6 +5,7 @@ import { showModal, LOG_IN_MODAL, SIGN_UP_MODAL } from "./app/accountSlice";
 import LogInModal from "./Features/Misc/LogInModal";
 import SignUpModal from "./Features/Misc/SignUpModal";
 import logo from "./media/logo.png";
+import { useEffect } from "react";
 
 function LoginButtons(props) {
   const dispatch = useDispatch();
@@ -33,7 +34,12 @@ function LoginButtons(props) {
 function LogoutButton() {
   const navigate = useNavigate();
   const [logOut, { data }] = useLogOutMutation();
-  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (data) {
+      navigate('/');
+    }
+  });
 
   return (
     <div className="buttons">
