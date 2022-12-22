@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { clearForm } from "./accountSlice";
 
 export const apiSlice = createApi({
-  reducerPath: "fomore",
+  reducerPath: "bonjuur",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.REACT_APP_BONJUUR_API_HOST,
     prepareHeaders: (headers, { getState }) => {
