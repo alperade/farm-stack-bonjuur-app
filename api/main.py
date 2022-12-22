@@ -11,7 +11,7 @@ app = FastAPI()
 
 origins = [
     os.environ.get("CORS_HOST", "http://localhost"),
-    "http://localhost:3000",
+    "http://localhost:3000", "https://bonjuurreact.azurewebsites.net"
 ]
 
 
