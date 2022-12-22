@@ -13,6 +13,7 @@ class MemberQueries(Queries):
     def create(self, member: MemberIn) -> MemberOut:
         props = member.dict()
         props["is_active"] = True
+        props["cleaner"] = "Cleaner #1"
         props["created_on"] = datetime.now()
         self.collection.insert_one(props)
         props["id"] = str(props["_id"])

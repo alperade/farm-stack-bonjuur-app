@@ -31,12 +31,12 @@ export function PickMembership() {
                 <div className="card" style={{margin:"1rem"}}>
                     <div className="card-body">
                         <h3 className="card-title">Just Keeping</h3>
-                        <h5 className="card-text">$80 per week</h5>
+                        <h5 className="card-text">Starting from $80 per week</h5>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">Mail and Package Collection from the lobby. Don't worry, we will separate circulars; Flatten & recycle empty boxes.</li>
                             <li className="list-group-item">Tidy up all the rooms, sorting everything back to its place, including your ever-missing remote controls!</li>
-                            <li className="list-group-item">Kitchen cleaning. Empty and replace the waste basket. Put dishes into the dishwasher, including your empty coffee cup remaining in the living room. we got you covered!</li>
-                            <li className="list-group-item">Bathroom Cleaning. Clean the sink and that toothpaste residue too. Oh yes, we are aware that's not the only residue we will clean. We will put down the toilet seat too, no worries.</li>
+                            <li className="list-group-item">Kitchen cleaning. Empty and replace the waste basket. Put dishes into the dishwasher, including your empty coffee cup remaining in the living room.</li>
+                            <li className="list-group-item">Bathroom Cleaning. Clean the sink and that toothpaste residue too. Oh yes, we are aware that's not the only residue we will clean.</li>
                             <li className="list-group-item">Bedroom cleaning. we will make your bed and fluff your pillows. Your bedroom would be calling for restful sleep.</li>
                         </ul>
                         </div>
@@ -47,7 +47,7 @@ export function PickMembership() {
                 <div className="card" style={{margin:"1rem"}}>
                     <div className="card-body">
                         <h3 className="card-title">Keeping+</h3>
-                        <h5 className="card-text">$150 per week</h5>
+                        <h5 className="card-text">Starting from $150 per week</h5>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">Dust lamps, fixtures, ceiling fans, window ledges, blinds, furniture, shelves, and decor.</li>
                             <li className="list-group-item">Wipe down doors and light switches.</li>

@@ -8,6 +8,7 @@ import PickDateTime from "./Step4DateTime";
 import Review from "./Step6Review";
 import MembershipDetails from "./Step7Success";
 import WaitList from "./WaitList";
+import Admin from "./AdminDashboard";
 
 import SignupStep from "./Step5Signup";
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/review" element={<Review />} />
             <Route path="/details" element={<MembershipDetails />} />
             <Route path="/waitlist" element={<WaitList />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </div>
       </BrowserRouter>

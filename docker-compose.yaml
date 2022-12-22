@@ -36,7 +36,6 @@ services:
       MONGO_URL: ${MONGO_URL}
       DATABASE_NAME: bonjuur-db
       SIGNING_KEY: ${SIGNING_KEY}
-      YELP_API_KEY: ${YELP_API_KEY}
       WAIT_HOSTS: mongo:27017
       WAIT_BEFORE: 5
       WAIT_TIMEOUT: 60
