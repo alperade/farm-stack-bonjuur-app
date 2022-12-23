@@ -23,8 +23,8 @@ RESTful web application for scheduling cleaning appointments.
 
 
 ## To-do
-- Deploy react on azure
 - Forgot password with email reset (https://www.geeksforgeeks.org/sending-email-using-fastapi-framework-in-python/)
+- https://stackoverflow.com/questions/6270782/how-to-send-an-email-with-python
 - Stop subscription page (turn is_active to false)
 
 ## Deployment Resources
