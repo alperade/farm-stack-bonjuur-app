@@ -23,8 +23,7 @@ RESTful web application for scheduling cleaning appointments.
 
 
 ## To-do
-- Forgot password with email reset (https://www.geeksforgeeks.org/sending-email-using-fastapi-framework-in-python/)
-- https://stackoverflow.com/questions/6270782/how-to-send-an-email-with-python
+- Forgot password with email reset: Use MS Graph to send emails - https://developer.microsoft.com/en-us/graph/quick-start
 - Stop subscription page (turn is_active to false)
 
 ## Deployment Resources
