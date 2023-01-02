@@ -25,6 +25,7 @@ RESTful web application for scheduling cleaning appointments.
 ## To-do
 - Forgot password with email reset: Use MS Graph to send emails - https://developer.microsoft.com/en-us/graph/quick-start
 - Stop subscription page (turn is_active to false)
+- Update readme
 
 ## Deployment Resources
 - https://learn.microsoft.com/en-us/azure/app-service/tutorial-custom-container?tabs=azure-cli&pivots=container-linux
