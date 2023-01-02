@@ -1,4 +1,6 @@
 azd_info.py
+.env
+ghi/.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
