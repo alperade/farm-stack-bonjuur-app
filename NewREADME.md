@@ -28,7 +28,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#deployment">Deployment Resources</a></li>
+    <li><a href="#deployent-resources">Deployment Resources</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -97,11 +97,11 @@ To get a local copy up and running follow these simple example steps.
 
 
 
-<!-- DEPLOYMENT RESOURCE -->
+<!-- DEPLOYMENT RESOURCES -->
 ## Deployment Resources
 
 * https://learn.microsoft.com/en-us/azure/app-service/tutorial-custom-container?tabs=azure-cli&pivots=container-linux
-* docker requires you to specify a --platform=linux/amd64 each time you need to build or run an amd64 image/container.
+* Specify --platform=linux/amd64 each time you need to build or run an amd64 image/container.
 * https://stackoverflow.com/questions/60163440/docker-fails-to-pull-the-image-from-within-azure-app-service
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
