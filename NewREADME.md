@@ -86,26 +86,24 @@ To get a local copy up and running follow these simple example steps.
   docker compose build
   ```
 * Run Docker Containers
-```sh
-docker compose up
-```
+  ```sh
+  docker compose up
+  ```
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/alperade/farm-stack-bonjuur-app.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+2. Sign up to Atlas Mongo and create a cluster
+
+3. Create an `.env` file
+   ```py
+   MONGO_URL = 'ENTER MONGO URL HERE'
+   SIGNING_KEY = 'ENTER SIGNING KEY HERE'
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
