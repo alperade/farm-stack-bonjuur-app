@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/alperade/farm-stack-bonjuur-app">
-    <img src="ghi/media/logo.png" alt="Logo" width="45" height="150">
+    <img src="/ghi/src/media/screenshot.png" alt="Logo" width="45" height="150">
   </a>
   <h3 align="center">Bonjuur App</h3>
 </div>
@@ -210,7 +210,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: ghi/media/screenshot.png
+[product-screenshot]: /ghi/src/media/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
