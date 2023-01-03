@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/alperade/farm-stack-bonjuur-app">
-    <img src="/ghi/src/media/screenshot.png" alt="Logo" width="45" height="150">
+    <img src="/ghi/src/media/logo.png" alt="Logo" width="45" height="150">
   </a>
   <h3 align="center">Bonjuur App</h3>
 </div>
