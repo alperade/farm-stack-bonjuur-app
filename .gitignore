@@ -1,6 +1,8 @@
 azd_info.py
 .env
 ghi/.env
+ghi/Dockerfile
+api/Dockerfile
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
